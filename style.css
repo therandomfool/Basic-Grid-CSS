@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+body {
+    background: #010203;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1{
+    color: crimson;
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: .314rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    /* transition: all 500ms; */
+    overflow: hidden;
+    z-index: 1;
+
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+ }
+  
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1314) rotate(720deg);
+    transition: transform 1s ease-in-out;
+
+    color: crimson;
+    background: gold;
+    border: 3px ridge crimson;
+    z-index: 99;
+ }
+
+ .basic-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 0 30px;
+
+    /* 1  too much code */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  
+    /* 2 cleaner code */
+    /* grid-template-columns: repeat(12, 1fr); */
+  
+    /* 3  better sizing, but overflows */
+    /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
+  
+    /* 4 final */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+ }
